@@ -19,7 +19,7 @@ const MessageItem = ({
   selectedConvo,
   lastMessageStatus,
 }: MessageItemProps) => {
-  const prev = messages[index - 1];
+  const prev = index + 1 < messages.length ? messages[index + 1] : undefined;
 
   const isGroupBreak =
     index === 0 ||
